@@ -1,0 +1,7 @@
+# Required for CLI
+rich>=13.0.0
+
+# Optional extras for richer discovery and reporting
+scapy>=2.5.0
+Jinja2>=3.1.0
+

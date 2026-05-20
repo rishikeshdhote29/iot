@@ -1,0 +1,78 @@
+{
+  "hosts": [
+    {
+      "alive_via": "demo",
+      "ip": "192.168.1.10",
+      "mac": "aa:bb:cc:dd:ee:01",
+      "mqtt": {
+        "anonymous_connect": true,
+        "details": "Broker accepted anonymous MQTT connection; subscription to '#' allowed",
+        "port": 1883,
+        "status": "anonymous-connect-allowed",
+        "subscription_allowed": true,
+        "subscription_tested": true
+      },
+      "open_ports": [
+        80,
+        1883
+      ],
+      "services": [
+        "http",
+        "mqtt"
+      ],
+      "tags": [
+        "mqtt-broker",
+        "web-ui",
+        "smart-device"
+      ]
+    },
+    {
+      "alive_via": "demo",
+      "ip": "192.168.1.15",
+      "mac": "aa:bb:cc:dd:ee:02",
+      "mqtt": {
+        "anonymous_connect": false,
+        "details": "MQTT port not open",
+        "port": 1883,
+        "status": "skipped",
+        "subscription_allowed": null,
+        "subscription_tested": false
+      },
+      "open_ports": [
+        23,
+        80
+      ],
+      "services": [
+        "telnet",
+        "http"
+      ],
+      "tags": [
+        "telnet-enabled",
+        "web-ui"
+      ]
+    }
+  ],
+  "scan": {
+    "discovery_method": "demo",
+    "mqtt_topic": "#",
+    "ports": [
+      22,
+      23,
+      80,
+      443,
+      1883,
+      5683
+    ],
+    "subnet": "192.168.1.0/24"
+  },
+  "summary": {
+    "anonymous_mqtt_allowed": 1,
+    "discovery_method": "demo",
+    "generated_at": "2026-05-20T06:21:29+00:00",
+    "live_hosts": 2,
+    "open_mqtt_brokers": 1,
+    "port_count": 6,
+    "subnet": "192.168.1.0/24"
+  },
+  "tool": "iot-vulnerability-audit"
+}
